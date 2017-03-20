@@ -1,0 +1,8 @@
+class_name: IntegrationTester
+modules:
+    enabled:
+        - \Helper\Integration
+
+extensions:
+    enabled:
+        - \Imjoehaines\Flowder\Codeception\Flowdception
