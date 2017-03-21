@@ -9,7 +9,7 @@ before_script:
   - composer install
 
 script:
-  - vendor/bin/codecept run integration --coverage-xml=coverage.xml && bash <(curl -s https://codecov.io/bash) -c -F integration
+  - vendor/bin/codecept run integration --coverage --coverage-xml=coverage.xml && bash <(curl -s https://codecov.io/bash) -c -F integration
 
 matrix:
   fast_finish: true
