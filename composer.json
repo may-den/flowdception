@@ -1,4 +1,23 @@
 {
+    "name": "imjoehaines/flowdceptiong",
+    "description": "A Codeception Extension for Flowder",
+    "keywords": [
+        "testing",
+        "codeception",
+        "flowder",
+        "fixtures",
+        "fixture-loading"
+    ],
+    "homepage": "https://github.com/imjoehaines/flowdception",
+    "license": "The Unlicense",
+    "authors": [
+        {
+            "name": "Joe Haines",
+            "email": "hello@joehaines.co.uk",
+            "homepage": "https://www.joehaines.co.uk",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Imjoehaines\\Flowder\\Codeception\\": "src/"
@@ -7,12 +26,6 @@
     "require-dev": {
         "codeception/codeception": "^2.2"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../flowder/"
-        }
-    ],
     "require": {
         "imjoehaines/flowder": "dev-master"
     }
