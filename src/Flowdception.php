@@ -31,12 +31,12 @@ final class Flowdception extends Extension
      * relied on Codeception's YAML configuration then you couldn't easily use
      * arbitrary instances of Flowder's dependencies
      *
-     * @param mixed $args
+     * @param Flowder $flowder
      * @return void
      */
-    public static function bootstrap(...$args)
+    public static function bootstrap(Flowder $flowder)
     {
-        static::$flowder = new Flowder(...$args);
+        static::$flowder = $flowder;
     }
 
     /**

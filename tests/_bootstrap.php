@@ -5,6 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Imjoehaines\Flowder\Codeception\Flowdception;
 
+use Imjoehaines\Flowder\Flowder;
 use Imjoehaines\Flowder\Loader\PhpFileLoader;
 use Imjoehaines\Flowder\Truncator\SqliteTruncator;
 use Imjoehaines\Flowder\Persister\SqlitePersister;
@@ -20,8 +21,10 @@ $db->exec('CREATE TABLE IF NOT EXISTS example (
 )');
 
 Flowdception::bootstrap(
-    __DIR__ . '/_data/example.php',
-    new PhpFileLoader(),
-    new SqliteTruncator($db),
-    new SqlitePersister($db)
+    new Flowder(
+        __DIR__ . '/_data/example.php',
+        new PhpFileLoader(),
+        new SqliteTruncator($db),
+        new SqlitePersister($db)
+    )
 );
