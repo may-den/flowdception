@@ -42,11 +42,10 @@ final class Flowdception extends Extension
     /**
      * Load fixtures before each test runs
      *
-     * @param TestEvent $event
      * @return void
      * @throws LogicException when `bootstrap` hasn't been called
      */
-    public function beforeTest(TestEvent $event)
+    public function beforeTest()
     {
         $this->checkIsInitialised();
 
