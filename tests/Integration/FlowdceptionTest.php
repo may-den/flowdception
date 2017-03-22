@@ -1,28 +1,30 @@
 <?php
 
-use Imjoehaines\Flowder\Codeception\Flowdception;
+namespace Imjoehaines\Flowder\Codeception\Test;
 
+use PDO;
+use LogicException;
+use PHPUnit\Framework\TestCase;
 use Imjoehaines\Flowder\Flowder;
 use Imjoehaines\Flowder\Loader\PhpFileLoader;
+use Imjoehaines\Flowder\Codeception\Flowdception;
 use Imjoehaines\Flowder\Truncator\SqliteTruncator;
 use Imjoehaines\Flowder\Persister\SqlitePersister;
 
-class FlowdceptionCest
+class FlowdceptionTest extends TestCase
 {
-    public function itThrowsWhenNotBootstrapped(IntegrationTester $I)
+    public function testItThrowsWhenNotBootstrapped()
     {
-        $I->expectException(
-            new LogicException(
-                'Flowdception must be configured by calling Flowdception::bootstrap before any tests run'
-            ),
-            function () {
-                $flowdception = new Flowdception([], []);
-                $flowdception->beforeTest();
-            }
+        $this->setExpectedException(
+            LogicException::class,
+            'Flowdception must be configured by calling Flowdception::bootstrap before any tests run'
         );
+
+        $flowdception = new Flowdception([], []);
+        $flowdception->beforeTest();
     }
 
-    public function itLoadsFixturesWhenBeforeTestIsCalled(IntegrationTester $I)
+    public function testItLoadsFixturesWhenBeforeTestIsCalled()
     {
         $db = new PDO('sqlite::memory:');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -37,7 +39,7 @@ class FlowdceptionCest
 
         Flowdception::bootstrap(
             new Flowder(
-                __DIR__ . '/../_data/example.php',
+                __DIR__ . '/../data/example.php',
                 new PhpFileLoader(),
                 new SqliteTruncator($db),
                 new SqlitePersister($db)
@@ -59,6 +61,6 @@ class FlowdceptionCest
             'four' => '4',
         ]];
 
-        $I->assertSame($expected, $actual);
+        $this->assertSame($expected, $actual);
     }
 }

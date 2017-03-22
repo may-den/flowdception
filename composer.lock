@@ -4,56 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f4e12d02c0ef98ba3b42895b6ce6945",
+    "content-hash": "e7eb2428a7b7d3d1eaa78a30f2a61611",
     "packages": [
-        {
-            "name": "imjoehaines/flowder",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imjoehaines/flowder.git",
-                "reference": "e06bb4c09e43f68b862e23af8cd32515d95854ec"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imjoehaines/flowder/zipball/e06bb4c09e43f68b862e23af8cd32515d95854ec",
-                "reference": "e06bb4c09e43f68b862e23af8cd32515d95854ec",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Imjoehaines\\Flowder\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "The Unlicense"
-            ],
-            "authors": [
-                {
-                    "name": "Joe Haines",
-                    "email": "hello@joehaines.co.uk",
-                    "homepage": "https://www.joehaines.co.uk",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple and extensible fixture loader for PHP 5.6+, supporting SQLite and MySQL",
-            "homepage": "https://github.com/imjoehaines/flowder",
-            "keywords": [
-                "fixture-loading",
-                "fixtures",
-                "mysql",
-                "sqlite",
-                "testing"
-            ],
-            "time": "2017-03-21 18:48:53"
-        }
-    ],
-    "packages-dev": [
         {
             "name": "behat/gherkin",
             "version": "v4.4.5",
@@ -261,34 +213,37 @@
         },
         {
             "name": "facebook/webdriver",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/php-webdriver.git",
-                "reference": "77300c4ab2025d4316635f592ec849ca7323bd8c"
+                "reference": "3ea034c056189e11c0ce7985332a9f4b5b2b5db2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/77300c4ab2025d4316635f592ec849ca7323bd8c",
-                "reference": "77300c4ab2025d4316635f592ec849ca7323bd8c",
+                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/3ea034c056189e11c0ce7985332a9f4b5b2b5db2",
+                "reference": "3ea034c056189e11c0ce7985332a9f4b5b2b5db2",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
+                "ext-zip": "*",
                 "php": "^5.5 || ~7.0",
                 "symfony/process": "^2.8 || ^3.1"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^1.11",
+                "friendsofphp/php-cs-fixer": "^2.0",
                 "php-mock/php-mock-phpunit": "^1.1",
                 "phpunit/phpunit": "4.6.* || ~5.0",
                 "satooshi/php-coveralls": "^1.0",
                 "squizlabs/php_codesniffer": "^2.6"
             },
-            "suggest": {
-                "phpdocumentor/phpdocumentor": "2.*"
-            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-community": "1.5-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Facebook\\WebDriver\\": "lib/"
@@ -298,7 +253,7 @@
             "license": [
                 "Apache-2.0"
             ],
-            "description": "A PHP client for WebDriver",
+            "description": "A PHP client for Selenium WebDriver",
             "homepage": "https://github.com/facebook/php-webdriver",
             "keywords": [
                 "facebook",
@@ -306,7 +261,7 @@
                 "selenium",
                 "webdriver"
             ],
-            "time": "2017-01-13T15:48:08+00:00"
+            "time": "2017-03-22T10:56:03+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -485,6 +440,52 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "imjoehaines/flowder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imjoehaines/flowder.git",
+                "reference": "9b88ad10a9e7138494556d91c98e07ed62067370"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imjoehaines/flowder/zipball/9b88ad10a9e7138494556d91c98e07ed62067370",
+                "reference": "9b88ad10a9e7138494556d91c98e07ed62067370",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Imjoehaines\\Flowder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "The Unlicense"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Haines",
+                    "email": "hello@joehaines.co.uk",
+                    "homepage": "https://www.joehaines.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple and extensible fixture loader for PHP 5.6+, supporting SQLite and MySQL",
+            "homepage": "https://github.com/imjoehaines/flowder",
+            "keywords": [
+                "fixture-loading",
+                "fixtures",
+                "mysql",
+                "sqlite",
+                "testing"
+            ],
+            "time": "2017-03-22 12:38:02"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2346,6 +2347,7 @@
             "time": "2016-11-23T20:04:58+00:00"
         }
     ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {

@@ -23,10 +23,16 @@
             "Imjoehaines\\Flowder\\Codeception\\": "src/"
         }
     },
+    "autoload-dev": {
+      "psr-4": {
+        "Imjoehaines\\Flowder\\Codeception\\Test\\": "tests/"
+      }
+    },
     "require-dev": {
-        "codeception/codeception": "^2.2"
+        "phpunit/phpunit": "^5"
     },
     "require": {
-        "imjoehaines/flowder": "dev-master"
+        "imjoehaines/flowder": "dev-master",
+        "codeception/codeception": "^2.2"
     }
 }
