@@ -1,4 +1,4 @@
-# Flowdception
+# Flowdception [![Build Status](https://travis-ci.org/imjoehaines/flowdception.svg?branch=master)](https://travis-ci.org/imjoehaines/flowdception) [![codecov](https://codecov.io/gh/imjoehaines/flowdception/branch/master/graph/badge.svg)](https://codecov.io/gh/imjoehaines/flowdception)
 
 **Flowdception** is a Codeception Extension for integrating the [Flowder](https://github.com/imjoehaines/flowder) fixture loader into Codeception test suites.
 
