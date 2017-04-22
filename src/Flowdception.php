@@ -25,6 +25,11 @@ final class Flowdception extends Extension
     private static $flowder;
 
     /**
+     * @var mixed
+     */
+    private static $thingToLoad;
+
+    /**
      * Initialise the Flowder instance
      *
      * We need this to be able to provide a super-flexible fixture loader; if we
@@ -32,11 +37,13 @@ final class Flowdception extends Extension
      * arbitrary instances of Flowder's dependencies
      *
      * @param Flowder $flowder
+     * @param mixed $thingToLoad
      * @return void
      */
-    public static function bootstrap(Flowder $flowder)
+    public static function bootstrap(Flowder $flowder, $thingToLoad)
     {
         static::$flowder = $flowder;
+        static::$thingToLoad = $thingToLoad;
     }
 
     /**
@@ -47,9 +54,22 @@ final class Flowdception extends Extension
      */
     public function beforeTest()
     {
-        $this->checkIsInitialised();
+        static::checkIsInitialised();
 
-        static::$flowder->loadFixtures();
+        static::$flowder->loadFixtures(static::$thingToLoad);
+    }
+
+    /**
+     * Load fixtures manually rather than via the Codeception extension
+     *
+     * @param mixed $thingToLoad
+     * @return void
+     */
+    public static function loadFixtures($thingToLoad)
+    {
+        static::checkIsInitialised();
+
+        static::$flowder->loadFixtures($thingToLoad);
     }
 
     /**
@@ -58,9 +78,9 @@ final class Flowdception extends Extension
      * @return void
      * @throws LogicException when the Flowder instance hasn't been created
      */
-    private function checkIsInitialised()
+    private static function checkIsInitialised()
     {
-        if (!isset(static::$flowder)) {
+        if (!isset(static::$flowder, static::$thingToLoad)) {
             throw new LogicException(
                 'Flowdception must be configured by calling Flowdception::bootstrap before any tests run'
             );
