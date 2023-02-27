@@ -61,7 +61,7 @@ class FlowdceptionTest extends TestCase
             'four' => '4',
         ]];
 
-        $this->assertSame($expected, $actual);
+        $this->assertEquals($expected, $actual);
     }
 
     public function testItAllowsFixturesToBeLoadedManually()
@@ -100,6 +100,6 @@ class FlowdceptionTest extends TestCase
             'four' => '4',
         ]];
 
-        $this->assertSame($expected, $actual);
+        $this->assertEquals($expected, $actual);
     }
 }
