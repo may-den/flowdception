@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b561fbc4bf79af88c9b3e6b8b1a814d2",
+    "content-hash": "e1779c1d7f9dc3d7c68758339a8e9669",
     "packages": [
         {
             "name": "behat/gherkin",
@@ -453,28 +453,29 @@
         },
         {
             "name": "imjoehaines/flowder",
-            "version": "v2.0.0",
+            "version": "dev-devsuite/php-8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/imjoehaines/flowder.git",
-                "reference": "3168c52711a65fc52102dc67672de253e39fc215"
+                "url": "https://github.com/may-den/flowder.git",
+                "reference": "48d14226a7a7614e6f0d99c8cb9810cb896324e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imjoehaines/flowder/zipball/3168c52711a65fc52102dc67672de253e39fc215",
-                "reference": "3168c52711a65fc52102dc67672de253e39fc215",
+                "url": "https://api.github.com/repos/may-den/flowder/zipball/48d14226a7a7614e6f0d99c8cb9810cb896324e6",
+                "reference": "48d14226a7a7614e6f0d99c8cb9810cb896324e6",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3"
+                "php": "^7.3|^8.0"
             },
             "require-dev": {
-                "jangregor/phpstan-prophecy": "^0.6.1",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^0.12.9",
-                "phpstan/phpstan-phpunit": "^0.12.6",
-                "phpunit/phpunit": "9.0.0",
-                "symplify/easy-coding-standard": "^7.2"
+                "jangregor/phpstan-prophecy": "^0.8.1",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^0.12.67",
+                "phpstan/phpstan-phpunit": "^0.12.17",
+                "phpunit/phpunit": "^9.5.1",
+                "symplify/easy-coding-standard": "^8.3"
             },
             "suggest": {
                 "imjoehaines/flowdception": "Support for Flowder in Codeception test suites",
@@ -486,7 +487,16 @@
                     "Imjoehaines\\Flowder\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Imjoehaines\\Flowder\\Test\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit tests/"
+                ]
+            },
             "license": [
                 "Unlicense"
             ],
@@ -508,10 +518,9 @@
                 "testing"
             ],
             "support": {
-                "issues": "https://github.com/imjoehaines/flowder/issues",
-                "source": "https://github.com/imjoehaines/flowder/tree/master"
+                "source": "https://github.com/may-den/flowder/tree/devsuite/php-8"
             },
-            "time": "2020-02-09T11:11:05+00:00"
+            "time": "2023-02-24T12:27:11+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3892,10 +3901,14 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "imjoehaines/flowder": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.3|^8.0"
+    },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }

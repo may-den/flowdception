@@ -32,7 +32,14 @@
         "phpunit/phpunit": "^9.0"
     },
     "require": {
-        "imjoehaines/flowder": "^2.0",
+        "php": "^7.3|^8.0",
+        "imjoehaines/flowder": "dev-devsuite/php-8",
         "codeception/codeception": "^4.1"
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:may-den/flowder.git"
+        }
+    ]
 }
