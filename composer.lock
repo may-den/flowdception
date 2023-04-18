@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6df155f0435ab1f7e95443429858fa13",
+    "content-hash": "4a5fa719cf5363e73efa9bbbebce28b0",
     "packages": [
         {
             "name": "behat/gherkin",
@@ -495,16 +495,16 @@
         },
         {
             "name": "imjoehaines/flowder",
-            "version": "dev-devsuite/php-8",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/may-den/flowder.git",
-                "reference": "48d14226a7a7614e6f0d99c8cb9810cb896324e6"
+                "reference": "082e4464d689b7bf519cdcf64261fee7cb79bfc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/may-den/flowder/zipball/48d14226a7a7614e6f0d99c8cb9810cb896324e6",
-                "reference": "48d14226a7a7614e6f0d99c8cb9810cb896324e6",
+                "url": "https://api.github.com/repos/may-den/flowder/zipball/082e4464d689b7bf519cdcf64261fee7cb79bfc6",
+                "reference": "082e4464d689b7bf519cdcf64261fee7cb79bfc6",
                 "shasum": ""
             },
             "require": {
@@ -560,9 +560,9 @@
                 "testing"
             ],
             "support": {
-                "source": "https://github.com/may-den/flowder/tree/devsuite/php-8"
+                "source": "https://github.com/may-den/flowder/tree/v1.0.0"
             },
-            "time": "2023-02-24T12:27:11+00:00"
+            "time": "2023-04-12T09:26:57+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3673,9 +3673,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "imjoehaines/flowder": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
