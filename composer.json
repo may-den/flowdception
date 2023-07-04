@@ -33,7 +33,7 @@
     },
     "require": {
         "php": "^7.3|^8.0",
-        "imjoehaines/flowder": "^1.0",
+        "imjoehaines/flowder": "^2.1",
         "codeception/codeception": "^4.1"
     },
     "repositories": [
