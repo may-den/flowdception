@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca4862727ae2bf291eb5278e3814b624",
+    "content-hash": "f122c9d83456372e681f6aab633efed1",
     "packages": [
         {
             "name": "behat/gherkin",
@@ -496,7 +496,7 @@
         },
         {
             "name": "imjoehaines/flowder",
-            "version": "dev-master",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/may-den/flowder.git",
@@ -524,7 +524,6 @@
                 "imjoehaines/flowdception": "Support for Flowder in Codeception test suites",
                 "imjoehaines/flowder-phpunit": "Support for Flowder in PHPUnit test suites"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
