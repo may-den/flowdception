@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89a19b7b312581c35eaed48efb405c15",
+    "content-hash": "a2fa9e9c151963d0d4253cda26ba09f8",
     "packages": [
         {
             "name": "behat/gherkin",
@@ -3372,9 +3372,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "imjoehaines/flowder": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
