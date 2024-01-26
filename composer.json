@@ -32,7 +32,7 @@
         "phpunit/phpunit": "^9.5.1"
     },
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8",
         "imjoehaines/flowder": "^2.1-dev",
         "codeception/codeception": "^5"
     },
