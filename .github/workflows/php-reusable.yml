@@ -31,13 +31,9 @@ jobs:
           php_version: ${{ inputs.php_version }}
           COMPOSER_TOKEN: ${{ secrets.COMPOSER_TOKEN }}
 
-      # Install necessary packages
-      - name: Install linux packages
-        run: | 
-          sudo apt-get install libonig5
 
       # Testing Phase
-      - name: Run Codecept tests
+      - name: Run tests
         run: ./vendor/bin/phpunit tests/
 
       # Code Quality Checks
@@ -45,6 +41,7 @@ jobs:
         run: |
           composer sniffer:php81
           composer sniffer:php84
+          composer sniffer:psr12
 
       # Code Quality Checks
       - name: Get files changed in PR for Rector

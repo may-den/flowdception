@@ -36,6 +36,8 @@
     "scripts": {
         "sniffer:php81": "phpcs -p . --ignore=vendor/* --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --extensions=php --report-full=compatibility.txt --runtime-set testVersion 8.1",
         "sniffer:php84": "phpcs -p . --ignore=vendor/* --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --extensions=php --report-full=compatibility.txt --runtime-set testVersion 8.4",
+        "sniffer:psr12": "phpcs -p . --ignore=vendor/* --standard=PSR12 --extensions=php --report-full=PSR12Report.txt -v",
+        "sniffer:fix-psr12": "./vendor/bin/phpcbf --file-list=.phpcs --standard=PSR12",
         "rector": "./vendor/bin/rector process --dry-run",
         "rector:fix": "./vendor/bin/rector process",
         "stan": "./vendor/bin/phpstan analyse --memory-limit=2G --configuration=phpstan.neon",
