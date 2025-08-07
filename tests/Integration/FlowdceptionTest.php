@@ -16,8 +16,7 @@ class FlowdceptionTest extends TestCase
     public function testItThrowsWhenNotBootstrapped()
     {
         $this->expectException(
-            LogicException::class,
-            'Flowdception must be configured by calling Flowdception::bootstrap before any tests run'
+            LogicException::class
         );
 
         $flowdception = new Flowdception([], []);
