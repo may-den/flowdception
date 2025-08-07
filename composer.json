@@ -12,12 +12,12 @@
     "license": "Unlicense",
     "autoload": {
         "psr-4": {
-            "may-den\\Flowder\\Codeception\\": "src/"
+            "Imjoehaines\\Flowder\\Codeception\\": "src/"
         }
     },
     "autoload-dev": {
       "psr-4": {
-        "may-den\\Flowder\\Codeception\\Test\\": "tests/"
+        "Imjoehaines\\Flowder\\Codeception\\Test\\": "tests/"
       }
     },
     "require": {
