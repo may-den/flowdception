@@ -11,7 +11,8 @@ use Rector\Set\ValueObject\LevelSetList;
 
 return RectorConfig::configure()
     ->withPaths([
-        __DIR__ . '/',
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
     ])
     ->withImportNames(true, true, true, true)
     ->withSkip([
