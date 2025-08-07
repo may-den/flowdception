@@ -8,16 +8,16 @@
         "fixtures",
         "fixture-loading"
     ],
-    "homepage": "https://github.com/imjoehaines/flowdception",
+    "homepage": "https://github.com/may-den/flowdception/",
     "license": "Unlicense",
     "autoload": {
         "psr-4": {
-            "Imjoehaines\\Flowder\\Codeception\\": "src/"
+            "may-den\\Flowder\\Codeception\\": "src/"
         }
     },
     "autoload-dev": {
       "psr-4": {
-        "Imjoehaines\\Flowder\\Codeception\\Test\\": "tests/"
+        "may-den\\Flowder\\Codeception\\Test\\": "tests/"
       }
     },
     "require": {
