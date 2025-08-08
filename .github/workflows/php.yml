@@ -11,6 +11,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  hello:
+    runs-on: ubuntu-latest-2-core
+    steps:
+      - name: Hello World
+        run: echo "Hello from PHP workflow"
   php-checks:
     name: 'PHP ${{ matrix.php_version }}'
     uses: ./.github/workflows/php-reusable.yml
