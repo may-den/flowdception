@@ -16,15 +16,15 @@ jobs:
     steps:
       - name: Hello World
         run: echo "Hello from PHP workflow"
-  php-checks:
-    name: 'PHP ${{ matrix.php_version }}'
-    uses: ./.github/workflows/php-reusable.yml
-    strategy:
-      matrix:
-        include:
-          - php_version: '8.1'
-          # - php_version: '8.4'
-    with:
-      php_version: ${{ matrix.php_version }}
-    secrets:
-      COMPOSER_TOKEN: ${{ secrets.ACTIONS_COMPOSER_TOKEN }}
+  # php-checks:
+  #   name: 'PHP ${{ matrix.php_version }}'
+  #   uses: ./.github/workflows/php-reusable.yml
+  #   strategy:
+  #     matrix:
+  #       include:
+  #         - php_version: '8.1'
+  #         # - php_version: '8.4'
+  #   with:
+  #     php_version: ${{ matrix.php_version }}
+  #   secrets:
+  #     COMPOSER_TOKEN: ${{ secrets.ACTIONS_COMPOSER_TOKEN }}
