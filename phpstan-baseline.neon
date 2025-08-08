@@ -1,0 +1,7 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Static property Imjoehaines\\Flowder\\Codeception\\Flowdception\:\:\$flowder \(Imjoehaines\\Flowder\\Flowder\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: src/Flowdception.php

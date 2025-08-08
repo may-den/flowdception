@@ -1,5 +1,5 @@
 {
-    "name": "imjoehaines/flowdception",
+    "name": "may-den/flowdception",
     "description": "A Codeception Extension for Flowder",
     "keywords": [
         "testing",
@@ -8,16 +8,8 @@
         "fixtures",
         "fixture-loading"
     ],
-    "homepage": "https://github.com/imjoehaines/flowdception",
+    "homepage": "https://github.com/may-den/flowdception/",
     "license": "Unlicense",
-    "authors": [
-        {
-            "name": "Joe Haines",
-            "email": "hello@joehaines.co.uk",
-            "homepage": "https://www.joehaines.co.uk",
-            "role": "Developer"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Imjoehaines\\Flowder\\Codeception\\": "src/"
@@ -28,18 +20,39 @@
         "Imjoehaines\\Flowder\\Codeception\\Test\\": "tests/"
       }
     },
-    "require-dev": {
-        "phpunit/phpunit": "^9.5.1"
-    },
     "require": {
-        "php": "^8",
+        "php": "^8.1",
         "imjoehaines/flowder": "^2.1",
         "codeception/codeception": "^5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1",
+        "phpcompatibility/php-compatibility": "dev-develop",
+        "phpstan/phpstan": "^2.1",
+        "rector/rector": "^2.1",
+        "squizlabs/php_codesniffer": "^3.13"
+    },
+    "scripts": {
+        "sniffer:php81": "phpcs -p . --ignore=vendor/* --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --extensions=php --report-full=compatibility.txt --runtime-set testVersion 8.1",
+        "sniffer:php84": "phpcs -p . --ignore=vendor/* --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --extensions=php --report-full=compatibility.txt --runtime-set testVersion 8.4",
+        "sniffer:psr12": "phpcs -p . --ignore=vendor/* --standard=PSR12 --extensions=php --report-full=PSR12Report.txt -v",
+        "sniffer:fix-psr12": "./vendor/bin/phpcbf --file-list=.phpcs --standard=PSR12",
+        "rector": "./vendor/bin/rector process --dry-run",
+        "rector:fix": "./vendor/bin/rector process",
+        "stan": "./vendor/bin/phpstan analyse --memory-limit=2G --configuration=phpstan.neon",
+        "stan:baseline": "./vendor/bin/phpstan analyse --memory-limit=2G --configuration=phpstan.neon --generate-baseline",
+        "test": "./vendor/bin/phpunit tests/"
     },
     "repositories": [
         {
             "type": "vcs",
             "url": "git@github.com:may-den/flowder.git"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }

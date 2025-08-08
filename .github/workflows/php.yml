@@ -1,0 +1,25 @@
+name: PHP
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  php-checks:
+    name: 'PHP ${{ matrix.php_version }}'
+    uses: ./.github/workflows/php-reusable.yml
+    strategy:
+      matrix:
+        include:
+          - php_version: '8.1'
+          # - php_version: '8.4'
+    with:
+      php_version: ${{ matrix.php_version }}
+    secrets:
+      COMPOSER_TOKEN: ${{ secrets.ACTIONS_COMPOSER_TOKEN }}

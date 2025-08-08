@@ -5,7 +5,6 @@ namespace Imjoehaines\Flowder\Codeception;
 use LogicException;
 use Codeception\Events;
 use Codeception\Extension;
-use Codeception\Event\TestEvent;
 use Imjoehaines\Flowder\Flowder;
 
 final class Flowdception extends Extension
